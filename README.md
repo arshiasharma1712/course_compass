@@ -7,11 +7,11 @@
 Course Compass lets TAMU students ask natural language questions about courses, professors, and degree requirements — and get answers grounded in real data.
 
 **Example questions students can ask:**
-- "Who is the best professor for CSCE 221?"
-- "What classes do I need to complete the AI track?"
-- "What's the easiest path through the CS core requirements?"
+- "Who is the best professor for ACCT 229?"
+- "What courses are required for a Psychology major?"
+- "What classes do I need for the Business Analytics certificate?"
 - "What are the prerequisites for CSCE 420?"
-- "Which section of CSCE 314 has the highest A rate?"
+- "Which section of CHEM 107 has the highest A rate?"
 
 ## Why this is different
 
