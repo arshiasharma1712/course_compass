@@ -90,29 +90,27 @@ def convert_to_text_chunks(df):
 
 
 def main():
-    """
-    main() is the entry point - the function that runs first
-    when we execute this script.
-    """
-    
-    # Build the path to our CSV file
-    # os.path.join handles Windows/Mac path differences automatically
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     filepath = os.path.join(base_dir, 'data', 'raw', 'tamu_grade_reports.csv')
     
-    # Run our three functions in order
     df = load_grade_data(filepath)
     df = clean_grade_data(df)
     chunks = convert_to_text_chunks(df)
     
-    # Print the first 3 chunks so we can see what they look like
+    # Save chunks to a text file in data/processed/
+    # This means we only need to run this script once
+    output_path = os.path.join(base_dir, 'data', 'processed', 'grade_chunks.txt')
+    with open(output_path, 'w', encoding='utf-8') as f:
+        for chunk in chunks:
+            f.write(chunk + '\n')
+    
+    print(f"\nSaved {len(chunks)} chunks to {output_path}")
+    
+    # Still print the first 3 so we can see them
     print("\n--- SAMPLE OUTPUT (first 3 chunks) ---")
     for i, chunk in enumerate(chunks[:3]):
         print(f"\nChunk {i+1}:")
         print(chunk)
 
-
-# This line means: only run main() if we execute THIS file directly.
-# If another file imports this one, main() won't run automatically.
 if __name__ == "__main__":
     main()
