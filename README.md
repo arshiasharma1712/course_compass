@@ -117,7 +117,7 @@ streamlit run app.py
 🚧 **Currently in active development**
 
 - [x] Project structure and environment setup
-- [ ] TAMU grade distribution ingestion
+- [x] TAMU grade distribution ingestion
 - [ ] RateMyProfessor data ingestion
 - [ ] Course catalog ingestion
 - [ ] ChromaDB vector store setup
